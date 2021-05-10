@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+#popup-country-info {
+    display: flex;
+    justify-content: center;
+
+}
+
+#popup-country-info > .country-item {
+    list-style-type: none;
+    box-shadow: none;
+}
+
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.search-filters > span, .search-filters > .filter, .search-filters > input {
+    margin-bottom: 20px;
+}
+
+#search {
+    min-width: 260px;
+    padding: 0 9px;
+}
+
+span {
+    line-height: 1.6;
+    margin: 0 15px;
+}
+
+.population-block > input {
+    margin-bottom: 20px;
+}
+
+.filter {
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    height: 32px;
+    margin: 0 4px;
+    padding: 0 9px;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.closeBtn, #clear-filters {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+#clear-filters:hover, #clear-filters:focus, .closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#clear-filters {
+    line-height: 0.9;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.countries-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.country-item {
+    max-width: 270px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.country-flag {
+    border-radius: 5px 5px 0 0;
+    object-fit: scale-down;
+    width: 100%;
+
+}
+
+.country-name, .country-info {
+    margin-left: 15px;
+}

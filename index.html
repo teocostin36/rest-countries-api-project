@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Country</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <h1 class="header-title">REST Countries API Project</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="countryPopup" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div id="popup-country-info"></div>
+            </div>
+        </div>
+
+        <div class="search-filters">
+            <input type="text" id="search" placeholder="Search by: country name, code or capital"/>
+
+            <span style="margin-left: 20px">Filters</span>
+            <select class="filter" name="region">
+                <option value="" disabled selected>Region</option>
+            </select>
+
+            <div class="population-block">
+                <span>Population</span>
+                <input class="filter" name="min" placeholder="Min"/>
+                <input class="filter" name="max" placeholder="Max"/>
+            </div>
+
+            <select class="filter" name="language">
+                <option value="" disabled selected>Language</option>
+            </select>
+            <select class="filter" name="timezone">
+                <option value="" disabled selected>Timezone</option>
+            </select>
+            <select class="filter" name="currency">
+                <option value="" disabled selected>Currency</option>
+            </select>
+            <span id="clear-filters">x</span>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
